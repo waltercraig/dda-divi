@@ -1,0 +1,38 @@
+@use '../constants' as *;
+
+// 01 - breakpoints
+// Usage: https://css-tricks.com/snippets/sass/mixin-manage-breakpoints/
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint 
+/// @require $breakpoints
+
+@mixin respond-to($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+        // Prints a media query based on the value
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+@mixin min-width($breakpoint) {
+    // Prints a media query based on the value
+    @media only screen and (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin max-width($breakpoint) {
+    // Prints a media query based on the value
+    @media only screen and (min-width: $breakpoint) {
+        @content;
+    }
+}

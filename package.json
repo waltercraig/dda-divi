@@ -1,0 +1,20 @@
+{
+  "name": "wp-craig",
+  "version": "0.1.0",
+  "description": "A wordpress starter theme",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^25.5.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

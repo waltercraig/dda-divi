@@ -1,0 +1,119 @@
+// Root
+:root {
+    --white: white;
+    --black: #1E1E1E;
+    --gray: #6A6A6A;
+    --grey: var(--gray);
+    --overlay: rgba(22, 22, 22, 0.7);
+
+    // Spacing
+    --base-spacing: 18px;
+    --vertical-padding: var(--base-spacing);
+    --horizontal-padding: var(--base-spacing);
+
+    // Typography
+    --line-height: 1.7;
+    --body-typeface: 'Poppins', sans-serif;
+    --body-font-size: 14px;
+    --body-font-size-desktop: 18px;
+    --body-font-weight: 400;
+    --text-small: 0.7777em;
+
+    // ----- Headings
+    
+    
+    // Animation
+    --ease-out: cubic-bezier(0.23,1,0.32,1);
+
+    // Anchors
+    --link-color: var(--orange);
+
+    // Box Shadow
+    --box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+// Container
+$container-max-width-large: 1524px;
+$container-max-width-small: 576px;
+$container-padding-horizontal: var(--horizontal-padding);
+
+// Grid
+$grid-columns: 12 !default;
+
+// Breakpoints
+// Usage: https://css-tricks.com/snippets/sass/mixin-manage-breakpoints/
+$xs: 576px;
+$sm: 768px;
+$md: 992px;
+$lg: 1010px;
+$xl: 1200px;
+
+$breakpoints: (
+    'xs': $xs,
+    'sm': $sm, //Large Mobile
+    'md': $md, //Tablet Portrait
+    'lg':  $lg, //Tablet
+    'xl': $xl //Laptop
+    // 'desktop': 1400px
+) !default;
+
+$font-sizes: (
+    'p': '1rem',
+    'h1': '20px',
+    'h2': '1.4rem',
+    'h3': '1.2rem',
+    'h4': 'l.2rem',
+    'h5': 'l.2rem',
+    'h6': 'l.2rem'
+) !default;
+
+// Line heights
+$heading-line-height: var(--default-heading-line-height);
+
+$line-heights: (
+    'p': '1.7',
+    'h1': $heading-line-height,
+    'h2': $heading-line-height,
+    'h3': $heading-line-height,
+    'h4': $heading-line-height,
+    'h5': $heading-line-height,
+    'h6': $heading-line-height,
+    'ul': 'inherit',
+    'ol': 'inherit',
+    'li': 'inherit',
+    'dl': 'inherit'
+) !default;
+
+// Font weights
+$heading-font-weight: var(--default-heading-weight);
+
+$font-weights: (
+    'p': '400',
+    'h1': $heading-font-weight,
+    'h2': $heading-font-weight,
+    'h3': $heading-font-weight,
+    'h4': $heading-font-weight,
+    'h5': $heading-font-weight,
+    'h6': $heading-font-weight
+) !default;
+
+// Text colors
+// $heading-font-weight: var(--default-heading-weight);
+
+// $font-weights: (
+//     'p': '400',
+//     'h1': $heading-font-weight,
+//     'h2': $heading-font-weight,
+//     'h3': $heading-font-weight,
+//     'h4': $heading-font-weight,
+//     'h5': $heading-font-weight,
+//     'h6': $heading-font-weight
+// ) !default;
+
+
+@mixin element($name, $font-weight, $line-height) {
+    #{$name} {
+        font-weight: $font-weight;
+        line-height: $line-height;
+    }
+}
