@@ -1,5 +1,5 @@
 // CSS
 import './assets/styles/main.scss';
 
-// JS
+// JS file
 import './assets/js/match-heights';

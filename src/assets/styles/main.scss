@@ -1,7 +1,6 @@
 // Grid
 // @use './mixins/grid' as *;
 
-// Template Parts
-
-// Plugins 
-@use './plugins/woo';
+@use './theme/global.scss';
+@use './theme/slide.scss';
+@use './theme/navigation.scss';

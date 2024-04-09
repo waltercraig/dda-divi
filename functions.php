@@ -8,3 +8,5 @@ require_once 'inc/scripts-styles.php';
 require_once 'inc/woo.php';
 // Overides
 
+// Theme 
+require_once 'inc/theme.php';
